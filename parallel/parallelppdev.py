@@ -31,6 +31,7 @@ def _IOR(type, nr, size):
 def _IOW(type, nr, size):
     return _IOC(_IOC_WRITE, type, nr, sizeof(size))
 
+
 _IOC_SIZEBITS = 14
 _IOC_SIZEMASK = (1 << _IOC_SIZEBITS) - 1
 _IOC_NRSHIFT = 0
@@ -117,6 +118,7 @@ def _IOC_TYPE(nr):
 
 def _IOWR(type, nr, size):
     return _IOC(_IOC_READ | _IOC_WRITE, type, nr, sizeof(size))
+
 
 __ELF__ = 1
 __i386 = 1
